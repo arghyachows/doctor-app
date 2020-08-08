@@ -1,0 +1,28 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+  }
+  
+  
+  
+  header, footer, .content{
+    margin: auto;
+    border-bottom: 1px solid black;
+    width:100%;
+  }
+  
+  header .section,footer .section, .content .section{
+    height:100%;
+    width:100%;
+    margin:auto;
+  }
+  
+  header, footer {
+    flex: 0 0 auto;
+  }
+  
+  .content{
+    flex: 1;
+  }
