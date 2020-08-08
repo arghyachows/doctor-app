@@ -1,0 +1,65 @@
+<mat-drawer-container>
+    <mat-drawer #sidenav mode="over" [(opened)]="opened">
+        <div class="section">
+            <div class="d-flex flex-row">
+                <div class="p-2">
+                    <button class="btn" (click)="sidenav.toggle()"><i class="fa fa-bars nav-close-btn"
+                            aria-hidden="true"></i></button>
+                    <div class="menu-bar pt-2">
+                        <mat-grid-list cols="1" rowHeight="1:1">
+                            <mat-grid-tile><button class="btn"><i class="fa fa-ambulance"
+                                        aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-user-md" aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-flask" aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-medkit" aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-stethoscope"
+                                        aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-flask" aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-wheelchair"
+                                        aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                            <mat-grid-tile><button class="btn"><i class="fa fa-power-off"
+                                        aria-hidden="true"></i></button>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="wrapper">
+            <header>
+                <div class="section">
+                    <div class="d-flex flex-row">
+                        <div class="p-2"><button class="btn" (click)="sidenav.toggle()"><i
+                                    class="fa fa-bars nav-open-btn" aria-hidden="true"></i></button></div>
+                        <div class="p-2">
+                            <app-header></app-header>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <div class="section">
+                    <app-content></app-content>
+                </div>
+            </div>
+            <footer>
+                <div class="section">
+                    <app-footer></app-footer>
+                </div>
+            </footer>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
