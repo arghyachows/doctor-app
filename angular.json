@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "doctor-app"
+    }
+  },
+  "defaultProject": "doctor-app",
+  "cli": {
+    "analytics": "4758d88e-98a2-450f-a214-b71e9b3f31fb"
+  }
 }
