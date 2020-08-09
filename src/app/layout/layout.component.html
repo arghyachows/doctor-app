@@ -1,62 +1,81 @@
 <mat-drawer-container>
-    <mat-drawer #sidenav mode="over" [(opened)]="opened">
-        <div class="section">
-            <div class="d-flex flex-row">
-                <div class="p-2">
-                    <button class="btn" (click)="sidenav.toggle()"><i class="fa fa-bars nav-close-btn"
-                            aria-hidden="true"></i></button>
-                    <div class="menu-bar pt-2">
-                        <mat-grid-list cols="1" rowHeight="1:1">
-                            <mat-grid-tile><button class="btn"><i class="fa fa-ambulance"
-                                        aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-user-md" aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-flask" aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-medkit" aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-stethoscope"
-                                        aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-hospital-o"
-                                        aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-wheelchair"
-                                        aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                            <mat-grid-tile><button class="btn"><i class="fa fa-power-off"
-                                        aria-hidden="true"></i></button>
-                            </mat-grid-tile>
-                        </mat-grid-list>
+    <mat-drawer #sidenav mode="over" [(opened)]="opened" class="bg-primary menu-bar">
+        <div class="d-flex flex-row">
+            <div class="p-2">
+                <div class="d-flex flex-row">
+                    <div><button class="btn btn-sm btn-block text-white" (click)="sidenav.toggle()"><i
+                                class="fa fa-bars nav-close-btn btn-sm btn-block" aria-hidden="true"></i></button></div>
+                    <div class="text-white">
+                        <app-header></app-header>
                     </div>
-
                 </div>
+                <mat-grid-list cols="1" rowHeight="3.5:1" class="flex-row" (click)="sidenav.toggle()"
+                    style="padding-top:15px">
+                    <mat-grid-tile>
+                        <div class="w-100">
+                            <button class="btn btn-sm btn-block text-white"><i class="fa fa-ambulance"
+                                    aria-hidden="true"></i>
+                                Ambulance</button>
+                        </div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-user-md"
+                                    aria-hidden="true"></i> Doctors</button></div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-flask"
+                                    aria-hidden="true"></i> Lab Tests</button></div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-heart"
+                                    aria-hidden="true"></i> Diagnostics</button></div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-medkit"
+                                    aria-hidden="true"></i> Pharmacy</button></div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-stethoscope"
+                                    aria-hidden="true"></i> Specialists</button></div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-hospital-o"
+                                    aria-hidden="true"></i> Hospitals</button></div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-wheelchair"
+                                    aria-hidden="true"></i> Wheelchair</button></div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <div class="w-100"><button class="btn btn-sm btn-block text-white"><i class="fa fa-power-off"
+                                    aria-hidden="true"></i> Logout</button></div>
+                    </mat-grid-tile>
+                </mat-grid-list>
+
             </div>
         </div>
 
     </mat-drawer>
     <mat-drawer-content>
         <div class="wrapper">
-            <header>
+            <header class="bg-primary text-white">
                 <div class="section">
                     <div class="d-flex flex-row">
-                        <div class="p-2"><button class="btn" (click)="sidenav.toggle()"><i
-                                    class="fa fa-bars nav-open-btn" aria-hidden="true"></i></button></div>
-                        <div class="p-2">
+                        <div class="pt-2 pb-2 pl-2"><button class="btn btn-sm btn-block text-white"
+                                (click)="sidenav.toggle()"><i class="fa fa-bars nav-open-btn btn-sm btn-block"
+                                    aria-hidden="true"></i></button></div>
+                        <div class="pt-2 pb-2 pr-2">
                             <app-header></app-header>
                         </div>
                     </div>
                 </div>
             </header>
             <div class="content">
-                <div class="section">
+                <div class="section" class="p-2">
                     <app-content></app-content>
                 </div>
             </div>
-            <footer>
+            <footer class="bg-primary text-white p-2">
                 <div class="section">
                     <app-footer></app-footer>
                 </div>

@@ -7,7 +7,6 @@
   
   header, footer, .content{
     margin: auto;
-    border-bottom: 1px solid black;
     width:100%;
   }
   
@@ -28,3 +27,13 @@
   .nav-close-btn{
       transform: rotate(90deg);
   }
+  
+
+  .mat-grid-list{
+    width:40vw;
+  }
+
+  .btn{
+    text-align:left;
+  }
+  

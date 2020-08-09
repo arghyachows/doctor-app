@@ -12,13 +12,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { AmbulanceComponent } from './content/ambulance/ambulance.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     ContentComponent,
-    LayoutComponent
+    LayoutComponent,
+    AmbulanceComponent
   ],
   imports: [
     BrowserModule,
