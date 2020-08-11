@@ -12,7 +12,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AmbulanceComponent } from './content/ambulance/ambulance.component';
+import { LocationService } from './services/location.service';
+import { AgmCoreModule } from '@agm/core';
+import { MainMenuComponent } from './content/main-menu/main-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,8 @@ import { AmbulanceComponent } from './content/ambulance/ambulance.component';
     FooterComponent,
     ContentComponent,
     LayoutComponent,
-    AmbulanceComponent
+    AmbulanceComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +34,16 @@ import { AmbulanceComponent } from './content/ambulance/ambulance.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSnackBarModule,
+    AgmCoreModule.forRoot({
+      // please get your own API key here:
+      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
+      apiKey: 'AIzaSyCULRBvKpMyHRTaoXcuNP2KW8VVQP2yq1M',
+      libraries: ["places"]
+    })
   ],
-  providers: [],
+  providers: [LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

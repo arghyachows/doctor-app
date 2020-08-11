@@ -1,1 +1,14 @@
-<p>ambulance works!</p>
+<div class="location-search pb-3">
+    <input #search autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control">
+</div>
+<div class="map-container">
+    <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude" label="You!"></agm-marker>
+    </agm-map>
+</div>
+<div class="selected-address pt-3">
+    <strong>Your Address:</strong> {{address}}
+</div>
+<div class="set-address text-right">
+    <button class="btn btn-sm btn-info">Continue</button>
+</div>
