@@ -17,6 +17,7 @@ import { AmbulanceComponent } from './content/ambulance/ambulance.component';
 import { LocationService } from './services/location.service';
 import { AgmCoreModule } from '@agm/core';
 import { MainMenuComponent } from './content/main-menu/main-menu.component';
+import { MapboxAmbulanceComponent } from './content/mapbox-ambulance/mapbox-ambulance.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { MainMenuComponent } from './content/main-menu/main-menu.component';
     ContentComponent,
     LayoutComponent,
     AmbulanceComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    MapboxAmbulanceComponent
   ],
   imports: [
     BrowserModule,
